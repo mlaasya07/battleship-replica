@@ -1,42 +1,59 @@
+/* Root container */
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family: sans-serif;
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Canvas boards */
+canvas {
+  display: block;
+  background-color: #000;
+  cursor: pointer;
+  margin: 0 auto;
+  border: 2px solid #555;
+  box-sizing: border-box;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Buttons */
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #1e3a8a;
+  background-color: rgba(30, 64, 175, 0.5);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+button:hover {
+  background-color: rgba(30, 64, 175, 0.7);
 }
 
-.card {
-  padding: 2em;
-}
+/* Flex helpers for layout */
+.flex { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.gap-6 { gap: 1.5rem; }
 
-.read-the-docs {
-  color: #888;
+/* Turn text colors */
+.text-green-400 { color: #4ade80; }
+.text-red-400 { color: #f87171; }
+.text-blue-400 { color: #60a5fa; }
+.text-blue-500 { color: #3b82f6; }
+
+/* Header/Footer spacing */
+header, footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
 }
